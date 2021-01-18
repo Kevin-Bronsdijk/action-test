@@ -9,5 +9,12 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2.1.0
       - name: message
         run: echo "Test 1,2,3"
+      - name: Bash
+        run: | 
+          pwd
+          ls
+        shell: bash
